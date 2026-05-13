@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arushi Parasrampuria — Portfolio</title>
+<!--
+  IMAGE FILES EXPECTED IN ./assets/ (relative to this HTML file)
+  ─────────────────────────────────────────────────────────────
+  assets/cover-bg.png        — teal corrugated lines pattern (cover background)
+  assets/cover-art.png       — full ornate ARUSHI ka PORTFOLIO + देखो मगर प्यार से composition
+  assets/nav-logo.png        — simple ARUSHI ka PORTFOLIO text logo (top-nav)
+  assets/toran-left.png      — hanging fruit/leaves toran (cover top-left)
+  assets/toran-right.png     — hanging fruit/leaves toran (cover top-right)
+  assets/portrait.png        — your collage portrait (about me section)
+
+  assets/project-01.png      — post-donation mockup
+  assets/project-02.png      — metago mockup
+  assets/project-03.png      — new giving mockup
+
+  assets/scbi-01.png         — blur image / story page mockup
+  assets/scbi-02.png         — share card mockup
+  assets/scbi-03.png         — 3-month trial monthly giving mockup
+
+  assets/archive-01.png      — game dashboard
+  assets/archive-02.png      — eyewear sketches
+  assets/archive-03.png      — agritech app screens
+
+  assets/outside-illos.png   — hand-drawn fly illustrations
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;500;600;700&family=Geist:wght@400;500;600;700;900&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --khaki: #dcd7b8;
+  --teal: #538e9c;
+  --pink: #b7727f;
+  --yellow: #e5b543;
+  --purple: #865e97;
+  --green: #8c904e;
+  --black: #2f3634;
+  --bg: #f3efd9;
+  --text: #2f3634;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Geist', system-ui, sans-serif;
+  font-weight: 400;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+h1, h2, h3, h4 { font-family: 'Geist', sans-serif; font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; }
+.hindi { font-family: 'Anek Devanagari', sans-serif; font-weight: 500; }
+
+/* Section dividers removed for a simpler scroll */
+
+/* ============================== */
+/* TOP NAV */
+/* ============================== */
+nav.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--black);
+  padding: 0.7rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 2px solid var(--yellow);
+}
+.nav-logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  flex-shrink: 0;
+}
+.nav-logo img { height: 100%; width: auto; }
+.nav-logo .fallback {
+  font-family: 'Geist', sans-serif;
+  font-weight: 900;
+  font-size: 0.95rem;
+  color: var(--khaki);
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.nav-logo .fallback .ka {
+  background: var(--yellow);
+  color: var(--pink);
+  padding: 0 0.4rem;
+  border-radius: 2px;
+  font-family: 'Anek Devanagari', sans-serif;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-links {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+.nav-links a {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--khaki);
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--yellow); }
+.nav-cta {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--pink);
+  color: var(--khaki);
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  border: 2px solid var(--yellow);
+  cursor: pointer;
+  transition: transform 0.15s;
+  text-decoration: none;
+}
+.nav-cta:hover { transform: translateY(-2px); }
+.hamburger {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--khaki);
+  color: var(--khaki);
+  width: 40px;
+  height: 36px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger:hover { color: var(--yellow); border-color: var(--yellow); }
+
+@media (max-width: 800px) {
+  nav.top-nav { padding: 0.5rem 0.8rem; gap: 0.5rem; }
+  .nav-logo { height: 30px; max-width: 55%; }
+  .nav-logo img { max-width: 100%; height: auto; max-height: 30px; }
+  .nav-right { gap: 0.5rem; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--black);
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    border-bottom: 2px solid var(--yellow);
+    border-left: 2px solid var(--yellow);
+    min-width: 200px;
+    align-items: flex-start;
+  }
+  .nav-links.open { display: flex; }
+  .hamburger { display: inline-flex; width: 36px; height: 32px; font-size: 0.95rem; }
+  .nav-cta { padding: 0.4rem 0.7rem; font-size: 0.65rem; letter-spacing: 0.04em; border-width: 1.5px; }
+  .nav-logo .fallback { font-size: 0.8rem; }
+}
+@media (max-width: 480px) {
+  .nav-cta { display: none; }
+  .nav-logo { max-width: 70%; height: 28px; }
+  .nav-logo img { max-height: 28px; }
+}
+
+/* ============================== */
+/* VIEW SWITCHING */
+/* ============================== */
+.view { display: none; }
+.view.active { display: block; }
+
+/* ============================== */
+/* SECTION COMMON */
+/* ============================== */
+section { padding: 5rem 2rem; position: relative; }
+.container { max-width: 1100px; margin: 0 auto; position: relative; }
+.section-label {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--pink);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.section-label .hindi {
+  font-size: 1.25em;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 600;
+}
+.section-title {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: var(--black);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+.section-intro {
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+/* ============================== */
+/* COVER */
+/* ============================== */
+section#cover-sec {
+  background: var(--teal) url('assets/cover-bg.png') center / cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  position: relative;
+  cursor: pointer;
+}
+.cover-toran {
+  position: absolute;
+  top: 0;
+  width: 110px;
+  pointer-events: none;
+}
+.cover-toran.left { left: 4%; }
+.cover-toran.right { right: 4%; transform: scaleX(-1); }
+.cover-toran img { width: 100%; }
+.cover-toran .fallback { font-size: 3rem; text-align: center; padding-top: 1rem; color: var(--green); }
+.cover-art { max-width: 720px; width: 100%; margin: 0 auto; }
+.cover-art img { width: 100%; height: auto; }
+.cover-art .fallback {
+  background: rgba(0,0,0,0.4);
+  color: var(--khaki);
+  padding: 5rem 3rem;
+  text-align: center;
+  border: 4px dashed var(--khaki);
+  border-radius: 4px;
+}
+.cover-art .fallback .title {
+  font-family: 'Geist', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  letter-spacing: -0.03em;
+  text-shadow: 4px 4px 0 var(--pink);
+}
+.cover-art .fallback .tagline {
+  font-family: 'Anek Devanagari', sans-serif;
+  margin-top: 1rem;
+  color: var(--yellow);
+  font-size: 1.4rem;
+}
+.cover-art .fallback .note { margin-top: 2rem; font-size: 0.85rem; opacity: 0.7; font-family: 'Geist', sans-serif; }
+.cover-cta {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  color: var(--khaki);
+  font-size: 0.85rem;
+  margin-top: 3rem;
+  cursor: pointer;
+  letter-spacing: 0.15em;
+  background: transparent;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-transform: uppercase;
+  animation: pulse 2s infinite;
+}
+.cover-cta:hover { color: var(--yellow); }
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+@media (max-width: 700px) {
+  section#cover-sec { padding: 2rem 0.3rem 1.5rem; min-height: 650px; }
+  .cover-toran { width: 50px; }
+  .cover-toran.left { left: 0; }
+  .cover-toran.right { right: 0; }
+  .cover-art { max-width: 100%; width: 100%; }
+  .cover-cta { font-size: 0.7rem; padding: 0.4rem 0.6rem; margin-top: 1.5rem; }
+}
+
+/* ============================== */
+/* ABOUT ME (now at top, full bio) */
+/* ============================== */
+section#about { background: var(--bg); padding: 6rem 2rem; }
+.about-intro {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.about-text { flex: 1; min-width: 300px; }
+.about-greeting {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: var(--black);
+  margin-bottom: 1.5rem;
+}
+.about-text p { font-size: 1.08rem; margin-bottom: 1rem; max-width: 600px; color: var(--text); }
+.about-text p strong { color: var(--pink); font-weight: 600; }
+.about-text p a {
+  color: var(--pink);
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.15s;
+}
+.about-text p a:hover { color: var(--black); text-decoration-color: var(--pink); }
+.portrait-frame { width: 440px; flex-shrink: 0; position: relative; }
+.portrait-frame img { width: 100%; height: auto; display: block; }
+.portrait-frame .fallback {
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: 4px solid var(--black);
+  box-shadow: 8px 8px 0 var(--pink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--black);
+  padding: 2rem;
+  line-height: 1.4;
+}
+@media (max-width: 900px) {
+  .portrait-frame { width: 360px; }
+  .portrait-frame .fallback { width: 360px; height: 360px; }
+}
+@media (max-width: 700px) {
+  .about-intro { flex-direction: column; }
+  .portrait-frame { width: 300px; }
+  .portrait-frame .fallback { width: 300px; height: 300px; }
+}
+
+/* ============================== */
+/* PROJECTS */
+/* ============================== */
+section#projects {
+  background: var(--black);
+  color: var(--khaki);
+  padding: 6rem 2rem 5rem;
+}
+section#projects .section-label { color: var(--yellow); }
+section#projects .section-title { color: var(--khaki); }
+section#projects .section-intro { color: var(--khaki); opacity: 0.92; }
+section#projects .section-intro strong { color: var(--yellow); }
+
+/* PROJECT CARD (large) */
+.project-card-large {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto 3.5rem;
+}
+.project-inner {
+  background: var(--black);
+  border: 4px solid var(--yellow);
+  border-radius: 2px;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2.5rem;
+  position: relative;
+}
+/* Different border colors for each project */
+.project-card-large.c1 .project-inner { border-color: var(--yellow); }
+.project-card-large.c2 .project-inner { border-color: var(--teal); }
+.project-card-large.c3 .project-inner { border-color: var(--pink); }
+.project-card-large.c1 .project-text h3 { color: var(--khaki); }
+.project-card-large.c2 .project-text h3 { color: var(--khaki); }
+.project-card-large.c3 .project-text h3 { color: var(--khaki); }
+
+.project-text { display: flex; flex-direction: column; }
+.project-text h3 { font-size: clamp(1.4rem, 2.5vw, 1.8rem); margin-bottom: 1rem; line-height: 1.2; }
+.project-text p { color: var(--khaki); font-size: 1rem; line-height: 1.6; margin-bottom: 1.2rem; }
+.project-text p strong { color: var(--yellow); font-weight: 700; }
+.project-card-large.c2 .project-text p strong { color: var(--teal); }
+.project-card-large.c3 .project-text p strong { color: var(--pink); }
+.project-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+.tag {
+  border: 1.5px solid var(--khaki);
+  color: var(--khaki);
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+.case-cta {
+  background: var(--pink);
+  color: var(--khaki);
+  border: 2px solid var(--yellow);
+  padding: 0.8rem 1.5rem;
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  align-self: flex-start;
+  margin-top: auto;
+  transition: transform 0.15s;
+}
+.case-cta:hover { transform: translateY(-2px); }
+.project-image-slot {
+  background: var(--black);
+  border: 3px solid var(--yellow);
+  border-radius: 2px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  text-align: center;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.project-card-large.c2 .project-image-slot { border-color: var(--teal); }
+.project-card-large.c3 .project-image-slot { border-color: var(--pink); }
+.project-image-slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.project-image-slot .placeholder-msg {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--pink);
+  padding: 2rem;
+  background: var(--khaki);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.project-image-slot .placeholder-msg small { display: block; opacity: 0.6; margin-top: 0.5rem; font-weight: 500; letter-spacing: 0; }
+
+/* In-case-study visuals */
+.case-visual {
+  margin: 1.5rem 0;
+  background: var(--bg);
+  border: 2px solid var(--black);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.case-visual img { width: 100%; height: auto; display: block; }
+.case-visual .placeholder-msg {
+  padding: 3rem 2rem;
+  text-align: center;
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--pink);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.case-visual .placeholder-msg small { display: block; opacity: 0.6; margin-top: 0.5rem; font-weight: 500; letter-spacing: 0; text-transform: none; }
+
+@media (max-width: 800px) {
+  .project-inner { grid-template-columns: 1fr; gap: 1.5rem; padding: 1.8rem; }
+}
+
+/* SUBHEADS for SCBI / Archive within projects */
+.subhead-block { margin-top: 5rem; }
+.subhead-label {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.subhead-label .hindi { font-size: 1.25em; letter-spacing: 0; text-transform: none; font-weight: 600; }
+.subhead {
+  font-size: 1.7rem;
+  color: var(--khaki);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+}
+.subhead-intro {
+  color: var(--khaki);
+  margin-bottom: 2rem;
+  max-width: 720px;
+  opacity: 0.85;
+}
+
+/* SCBI CAROUSEL (on projects page) */
+.scbi-carousel {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  margin-top: 1rem;
+  max-width: 1100px;
+}
+.scbi-arrow {
+  background: var(--yellow);
+  border: 3px solid var(--black);
+  border-radius: 4px;
+  color: var(--pink);
+  width: 56px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.15s, background 0.15s;
+  padding: 0;
+}
+.scbi-arrow:hover {
+  background: var(--pink);
+  color: var(--yellow);
+  transform: scale(1.04);
+}
+.scbi-arrow svg { width: 28px; height: 28px; }
+.scbi-track {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  min-width: 0;
+  padding-top: 28px;
+}
+.scbi-cards-wrapper {
+  display: flex;
+  transition: transform 0.45s ease;
+}
+.scbi-cards-wrapper > .stamp-card {
+  flex: 0 0 100%;
+  min-width: 0;
+  margin-bottom: 0;
+}
+.scbi-dots {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.scbi-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--pink);
+  background: transparent;
+  color: var(--khaki);
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+.scbi-dot:hover { background: rgba(183, 114, 127, 0.2); }
+.scbi-dot.active {
+  background: var(--pink);
+  color: var(--khaki);
+  border-color: var(--yellow);
+}
+@media (max-width: 700px) {
+  .scbi-arrow { display: none; }
+  .scbi-carousel { gap: 0; }
+  .scbi-track { padding-top: 22px; }
+}
+
+/* Archive — circles on squares */
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+}
+.archive-card {
+  text-align: center;
+  background: var(--khaki);
+  border: 3px solid var(--black);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+.archive-card.c1 { background: var(--pink); }
+.archive-card.c2 { background: var(--teal); }
+.archive-card.c3 { background: var(--khaki); }
+.archive-card.c4 { background: var(--yellow); }
+.archive-card.c1 h4 { color: var(--khaki); }
+.archive-card.c2 h4 { color: var(--khaki); }
+.archive-card.c3 h4 { color: var(--black); }
+.archive-card.c4 h4 { color: var(--black); }
+.archive-card .archive-circle { border-color: var(--black); }
+.archive-circle {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: var(--bg);
+  border: 3px solid var(--yellow);
+  border-radius: 16px;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.archive-circle img { width: 100%; height: 100%; object-fit: cover; }
+.archive-circle .placeholder-msg {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--text);
+  text-align: center;
+  padding: 1rem;
+  opacity: 0.7;
+}
+.archive-card h4 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 900;
+  color: var(--black);
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
+}
+
+/* ============================== */
+/* OUTSIDE WORK SECTION (own section now) */
+/* ============================== */
+section#outside {
+  background: var(--green);
+  color: var(--khaki);
+  padding: 4rem 2rem;
+}
+section#outside .section-label { color: var(--yellow); }
+section#outside .section-title { color: var(--khaki); margin-bottom: 1rem; }
+.outside-content {
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.outside-text { flex: 1; min-width: 280px; }
+.outside-text p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.65; max-width: 580px; }
+.outside-illustrations {
+  width: 280px;
+  background: var(--khaki);
+  border: 3px solid var(--black);
+  padding: 1.2rem 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--black);
+  font-weight: 600;
+  font-size: 0.82rem;
+  aspect-ratio: 4/5;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 8px 8px 0 var(--pink);
+  transform: rotate(-2deg);
+  position: relative;
+}
+.outside-illustrations img { width: 100%; height: 100%; object-fit: cover; }
+.outside-illustrations::before {
+  content: '';
+  position: absolute;
+  top: -0.6rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 60px;
+  height: 16px;
+  background: rgba(231, 181, 67, 0.7);
+  border: 1px dashed var(--black);
+  border-radius: 2px;
+}
+@media (max-width: 700px) {
+  section#outside { padding: 3rem 1rem; }
+  .outside-content { flex-direction: column; gap: 2.5rem; }
+  .outside-illustrations { width: 240px; transform: rotate(-1.5deg); }
+}
+
+/* ============================== */
+/* CONTACT POSTCARD */
+/* ============================== */
+section#contact { background: var(--teal); padding: 6rem 2rem; }
+section#contact .section-label { color: var(--yellow); justify-content: center; }
+.postcard-image-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 12px 12px 0 var(--pink);
+  border-radius: 2px;
+  line-height: 0;
+}
+.postcard-image-wrapper img { display: block; width: 100%; height: auto; border-radius: 2px; }
+.postcard-overlay-links {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  line-height: 1.2;
+}
+.postcard-overlay-links a {
+  position: absolute;
+  pointer-events: auto;
+  right: 6%;
+  width: 42%;
+  text-align: right;
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(0.7rem, 1.4vw, 1.05rem);
+  font-weight: 500;
+  color: var(--black);
+  text-decoration: underline;
+  text-decoration-color: var(--pink);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  display: block;
+  cursor: pointer;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+.postcard-overlay-links a:hover { color: var(--pink); text-decoration-color: var(--black); }
+.postcard-overlay-links a:nth-child(1) { top: 55%; }
+.postcard-overlay-links a:nth-child(2) { top: 67%; }
+.postcard-overlay-links a:nth-child(3) { top: 79%; }
+@media (max-width: 700px) {
+  .postcard-overlay-links a {
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+  }
+  .postcard-overlay-links a:nth-child(1) { top: 67%; }
+  .postcard-overlay-links a:nth-child(2) { top: 76%; }
+  .postcard-overlay-links a:nth-child(3) { top: 85%; }
+}
+/* Prototype block (password-gated) */
+.prototype-block {
+  background: var(--khaki);
+  border: 2px solid var(--black);
+  padding: 1.5rem 1.5rem 1.3rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  box-shadow: 5px 5px 0 var(--pink);
+}
+.prototype-intro {
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.prototype-intro .muted { opacity: 0.65; font-weight: 400; }
+.prototype-buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.prototype-btn {
+  background: var(--pink);
+  color: var(--khaki);
+  border: 2px solid var(--yellow);
+  padding: 0.7rem 1.4rem;
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: transform 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.prototype-btn:hover { transform: translateY(-2px); }
+
+/* Password modal */
+.password-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(47, 54, 52, 0.78);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.password-modal.open { display: flex; }
+.password-modal-content {
+  background: var(--khaki);
+  border: 3px solid var(--black);
+  padding: 2.25rem 2rem 1.75rem;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 10px 10px 0 var(--pink);
+}
+.password-modal-content h3 {
+  font-family: 'Geist', sans-serif;
+  font-weight: 900;
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+  color: var(--black);
+  letter-spacing: -0.02em;
+}
+.password-modal-content p {
+  font-size: 0.92rem;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+.password-modal-content input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.95rem;
+  border: 2px solid var(--black);
+  border-radius: 2px;
+  background: var(--bg);
+  color: var(--black);
+  margin-bottom: 0.9rem;
+  box-sizing: border-box;
+}
+.password-modal-content input:focus { outline: 2px solid var(--pink); outline-offset: 1px; }
+.password-error {
+  color: var(--pink);
+  font-size: 0.82rem;
+  margin-bottom: 0.9rem;
+  font-weight: 600;
+  display: none;
+}
+.password-error.show { display: block; }
+.password-submit {
+  background: var(--pink);
+  color: var(--khaki);
+  border: 2px solid var(--yellow);
+  padding: 0.7rem 1.2rem;
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 2px;
+  width: 100%;
+  transition: transform 0.15s;
+}
+.password-submit:hover { transform: translateY(-2px); }
+.password-modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--black);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.password-modal-close:hover { color: var(--pink); }
+
+.postcard-fallback {
+  background: var(--khaki);
+  border: 3px dashed var(--black);
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  color: var(--pink);
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* ============================== */
+/* CASE STUDY VIEWS */
+/* ============================== */
+.case-view { background: var(--bg); }
+.case-container { max-width: 800px; margin: 0 auto; padding: 5rem 2rem; position: relative; }
+.case-back {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--pink);
+  margin-bottom: 2rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.case-back:hover { color: var(--black); }
+.case-title { font-size: clamp(2.4rem, 6vw, 4rem); color: var(--black); margin-bottom: 0.5rem; letter-spacing: -0.03em; }
+.case-title .hindi { font-size: 0.55em; color: var(--pink); margin-left: 0.6rem; font-weight: 500; letter-spacing: 0; }
+.case-subtitle { font-style: italic; color: var(--text); font-size: 1.15rem; margin-bottom: 2rem; font-weight: 500; opacity: 0.85; }
+.tldr {
+  background: var(--khaki);
+  border: 3px solid var(--black);
+  padding: 0.85rem 1.1rem;
+  margin: 1.5rem 0 2.5rem;
+  border-radius: 2px;
+  box-shadow: 6px 6px 0 var(--yellow);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 1rem;
+  align-items: baseline;
+}
+.tldr-row { display: contents; }
+.tldr-label {
+  font-family: 'Geist', sans-serif;
+  font-weight: 700;
+  font-size: 0.62rem;
+  color: var(--pink);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  align-self: baseline;
+}
+.tldr-value { font-size: 0.85rem; line-height: 1.45; }
+.case-section { margin: 3rem 0; }
+.case-section h2 { color: var(--black); font-size: 1.6rem; margin-bottom: 1rem; border-bottom: 2px solid var(--pink); padding-bottom: 0.5rem; }
+.case-section h3 { color: var(--green); font-size: 1.2rem; margin: 2rem 0 0.8rem; }
+.case-section h4 { color: var(--text); font-size: 0.95rem; margin: 1.5rem 0 0.6rem; font-weight: 700; }
+.case-section p, .case-section li { margin-bottom: 0.9rem; font-size: 1.05rem; line-height: 1.7; }
+.case-section ul, .case-section ol { padding-left: 1.5rem; margin-bottom: 1.5rem; }
+.case-section ul { list-style: none; padding-left: 0; }
+.case-section ul li { position: relative; padding-left: 2rem; }
+.case-section ul li::before {
+  content: ''; position: absolute; left: 0; top: 0.6em; width: 14px; height: 14px;
+  background: var(--pink);
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2 C 13 8, 16 9, 20 7 C 17 11, 18 14, 22 14 C 17 14, 14 16, 12 22 C 10 16, 7 14, 2 14 C 6 14, 7 11, 4 7 C 8 9, 11 8, 12 2 Z'/></svg>") no-repeat center / contain;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2 C 13 8, 16 9, 20 7 C 17 11, 18 14, 22 14 C 17 14, 14 16, 12 22 C 10 16, 7 14, 2 14 C 6 14, 7 11, 4 7 C 8 9, 11 8, 12 2 Z'/></svg>") no-repeat center / contain;
+}
+.case-section blockquote { border-left: 4px solid var(--pink); padding: 0.9rem 1.5rem; margin: 1.5rem 0; background: var(--khaki); font-style: italic; border-radius: 0 4px 4px 0; }
+.case-section blockquote cite { display: block; margin-top: 0.5rem; font-size: 0.9rem; color: var(--text); opacity: 0.7; font-style: normal; }
+.case-section strong { color: var(--pink); font-weight: 700; }
+.callout { background: var(--yellow); color: var(--black); padding: 1.2rem 1.5rem; margin: 1.5rem 0; border-radius: 2px; border: 3px solid var(--black); box-shadow: 4px 4px 0 var(--pink); }
+.visual-placeholder { background: var(--khaki); border: 2px dashed var(--pink); padding: 3rem 2rem; margin: 1.5rem 0; text-align: center; font-family: 'Geist', sans-serif; font-weight: 700; font-size: 0.78rem; color: var(--text); border-radius: 2px; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.85; }
+.up-next { background: var(--green); color: var(--khaki); padding: 2rem; margin-top: 4rem; text-align: center; border: 3px solid var(--black); cursor: pointer; border-radius: 2px; transition: transform 0.15s, box-shadow 0.15s; box-shadow: 6px 6px 0 var(--pink); display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+.up-next:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--pink); }
+.up-next .label { font-family: 'Geist', sans-serif; font-weight: 700; font-size: 0.78rem; color: var(--yellow); letter-spacing: 0.15em; text-transform: uppercase; }
+.up-next .next-title { font-size: 1.7rem; color: var(--khaki); }
+.divider-lotus { display: flex; align-items: center; gap: 1rem; justify-content: center; margin: 3rem 0; color: var(--pink); opacity: 0.7; }
+.divider-lotus::before, .divider-lotus::after { content: ''; flex: 1; height: 1px; background: currentColor; max-width: 80px; opacity: 0.5; }
+.icon { display: inline-block; vertical-align: middle; line-height: 0; color: currentColor; }
+.icon svg { width: 100%; height: 100%; display: block; }
+.lotus { width: 24px; height: 24px; }
+.lotus-large { width: 48px; height: 48px; }
+.eye { width: 28px; height: 18px; }
+.arrow { width: 90px; height: 22px; }
+.mehendi-margin { pointer-events: none; position: absolute; top: 0; bottom: 0; width: 70px; opacity: 0.18; color: var(--black); }
+.mehendi-margin.left { left: 0; }
+.mehendi-margin.right { right: 0; transform: scaleX(-1); }
+@media (max-width: 1100px) { .mehendi-margin { display: none; } }
+
+/* SCBI VIEW (full case page with image slots) */
+.scbi-view { background: var(--purple); padding-bottom: 5rem; }
+.scbi-view .case-back { color: var(--yellow); }
+.scbi-view .case-back:hover { color: var(--khaki); }
+.scbi-view .case-title { color: var(--khaki); }
+.scbi-view .scbi-intro { color: var(--khaki); opacity: 0.9; font-size: 1.05rem; max-width: 720px; margin-bottom: 3rem; }
+.scbi-cards { display: flex; flex-direction: column; gap: 3rem; margin-top: 2rem; }
+.stamp-card {
+  background: var(--khaki);
+  border: 3px solid var(--black);
+  position: relative;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.stamp-card .text-side { position: relative; z-index: 1; padding: 1.75rem; }
+.stamp-card .quote { font-weight: 900; font-size: 1.3rem; color: var(--black); margin-bottom: 1.25rem; }
+.stamp-card .field { margin-bottom: 1rem; }
+.stamp-card .field-label { font-family: 'Geist', sans-serif; font-weight: 700; font-size: 0.72rem; color: var(--pink); margin-bottom: 0.3rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.stamp-card .field-text { color: var(--black); font-size: 0.98rem; line-height: 1.6; }
+.stamp-card .result-strip { color: var(--green); font-weight: 900; font-size: 1rem; padding: 0; background: transparent; border-radius: 0; }
+.stamp-card.c1 { border-color: var(--yellow); }
+.stamp-card.c2 { border-color: var(--teal); }
+.stamp-card.c3 { border-color: var(--pink); }
+.stamp-card .image-side {
+  background: var(--black);
+  border: none;
+  border-left: 3px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  min-height: 320px;
+  overflow: hidden;
+}
+.stamp-card .image-side img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.stamp-card .image-side .placeholder-msg { font-family: 'Geist', sans-serif; font-weight: 700; font-size: 0.78rem; color: var(--pink); background: var(--khaki); padding: 2rem; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.stamp-card .image-side .placeholder-msg small { display: block; opacity: 0.6; margin-top: 0.5rem; font-weight: 500; }
+@media (max-width: 700px) {
+  .stamp-card { grid-template-columns: 1fr; }
+  .stamp-card .image-side { border-left: none; border-top: 3px solid var(--black); }
+}
+
+/* Archive View (full page) */
+.archive-view { background: var(--black); color: var(--khaki); padding-bottom: 5rem; }
+.archive-view .case-back { color: var(--yellow); }
+.archive-view .case-title { color: var(--khaki); }
+.archive-view .scbi-intro { color: var(--khaki); opacity: 0.85; font-size: 1.05rem; max-width: 720px; margin-bottom: 2rem; }
+.archive-view .archive-oval-grid { gap: 3rem; }
+.archive-view .archive-oval-frame { border-color: var(--yellow); border-width: 5px; }
+.archive-view .archive-oval h4 { color: var(--khaki); }
+
+@media (max-width: 700px) {
+  section { padding: 2.5rem 0.9rem; }
+  .case-container { padding: 2rem 0.9rem; }
+  .about-intro { gap: 1.5rem; margin-bottom: 0; }
+  .about-text p { font-size: 1rem; }
+  .project-card-large { margin-bottom: 2rem; }
+  .project-inner { padding: 1.2rem; gap: 1rem; }
+  .project-text h3 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+  .project-text p { font-size: 0.95rem; margin-bottom: 0.8rem; }
+  .project-image-slot { min-height: 220px; }
+  .outside-section { padding: 1.5rem; margin-top: 2rem; }
+  .outside-content { gap: 1.5rem; }
+  .subhead-block { margin-top: 2.5rem; }
+  .scbi-dots { margin-top: 1rem; gap: 0.5rem; }
+  .scbi-dot { width: 30px; height: 30px; font-size: 0.78rem; }
+  .subhead { font-size: 1.3rem; line-height: 1.25; }
+  .subhead-label { font-size: 0.7rem; letter-spacing: 0.12em; gap: 0.3rem; }
+  .subhead-label .hindi { font-size: 1.15em; }
+  .stamp-card { padding: 1rem 0.9rem; gap: 0.8rem; }
+  .stamp-card .corner-mark { width: 46px; height: 46px; font-size: 0.55rem; top: -14px; right: 0.8rem; border-width: 2px; }
+  .stamp-card .quote { font-size: 1.05rem; line-height: 1.25; margin-top: 0.3rem; margin-bottom: 1rem; }
+  .stamp-card .field-text { font-size: 0.9rem; line-height: 1.5; }
+  .stamp-card .field-label { font-size: 0.65rem; letter-spacing: 0.08em; }
+  .stamp-card .field { margin-bottom: 0.7rem; }
+  .stamp-card .image-side { min-height: 200px; }
+  .stamp-card .result-strip { font-size: 0.85rem; padding: 0.35rem 0.7rem; }
+  .archive-grid { gap: 1rem; }
+  .archive-card { padding: 1rem; }
+  .tldr { padding: 1rem 1.2rem; }
+  .case-section { margin: 2rem 0; }
+  .case-section h2 { font-size: 1.35rem; }
+  .case-section p, .case-section li { font-size: 1rem; }
+  .up-next { padding: 1.5rem; margin-top: 2.5rem; }
+  .up-next .next-title { font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- SVG SPRITE -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="ic-lotus" viewBox="0 0 24 24">
+      <path d="M12 2 C 13 8, 16 9, 20 7 C 17 11, 18 14, 22 14 C 17 14, 14 16, 12 22 C 10 16, 7 14, 2 14 C 6 14, 7 11, 4 7 C 8 9, 11 8, 12 2 Z" fill="currentColor"/>
+    </symbol>
+    <symbol id="ic-arrow" viewBox="0 0 90 22">
+      <path d="M 4 11 Q 18 4, 32 11 T 60 11 T 82 11" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <path d="M 74 5 L 84 11 L 74 17" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="ic-arrow-down" viewBox="0 0 22 90">
+      <path d="M 11 4 Q 18 18, 11 32 T 11 60 T 11 82" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <path d="M 5 74 L 11 84 L 17 74" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="mehendi-vine" viewBox="0 0 60 600" preserveAspectRatio="xMidYMid slice">
+      <g fill="currentColor">
+        <path d="M 30 0 Q 44 30, 30 60 Q 16 90, 30 120 Q 44 150, 30 180 Q 16 210, 30 240 Q 44 270, 30 300 Q 16 330, 30 360 Q 44 390, 30 420 Q 16 450, 30 480 Q 44 510, 30 540 Q 16 570, 30 600" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <ellipse cx="42" cy="20" rx="6" ry="2.5" transform="rotate(45 42 20)"/>
+        <ellipse cx="18" cy="50" rx="6" ry="2.5" transform="rotate(-45 18 50)"/>
+        <ellipse cx="42" cy="80" rx="6" ry="2.5" transform="rotate(45 42 80)"/>
+        <ellipse cx="18" cy="110" rx="6" ry="2.5" transform="rotate(-45 18 110)"/>
+        <ellipse cx="42" cy="140" rx="6" ry="2.5" transform="rotate(45 42 140)"/>
+        <ellipse cx="18" cy="170" rx="6" ry="2.5" transform="rotate(-45 18 170)"/>
+        <ellipse cx="42" cy="200" rx="6" ry="2.5" transform="rotate(45 42 200)"/>
+        <ellipse cx="18" cy="230" rx="6" ry="2.5" transform="rotate(-45 18 230)"/>
+        <ellipse cx="42" cy="260" rx="6" ry="2.5" transform="rotate(45 42 260)"/>
+        <ellipse cx="18" cy="290" rx="6" ry="2.5" transform="rotate(-45 18 290)"/>
+        <ellipse cx="42" cy="320" rx="6" ry="2.5" transform="rotate(45 42 320)"/>
+        <ellipse cx="18" cy="350" rx="6" ry="2.5" transform="rotate(-45 18 350)"/>
+        <ellipse cx="42" cy="380" rx="6" ry="2.5" transform="rotate(45 42 380)"/>
+        <ellipse cx="18" cy="410" rx="6" ry="2.5" transform="rotate(-45 18 410)"/>
+        <ellipse cx="42" cy="440" rx="6" ry="2.5" transform="rotate(45 42 440)"/>
+        <ellipse cx="18" cy="470" rx="6" ry="2.5" transform="rotate(-45 18 470)"/>
+        <ellipse cx="42" cy="500" rx="6" ry="2.5" transform="rotate(45 42 500)"/>
+        <ellipse cx="18" cy="530" rx="6" ry="2.5" transform="rotate(-45 18 530)"/>
+        <ellipse cx="42" cy="560" rx="6" ry="2.5" transform="rotate(45 42 560)"/>
+        <circle cx="30" cy="30" r="2"/>
+        <circle cx="30" cy="90" r="2"/>
+        <circle cx="30" cy="150" r="2"/>
+        <circle cx="30" cy="210" r="2"/>
+        <circle cx="30" cy="270" r="2"/>
+        <circle cx="30" cy="330" r="2"/>
+        <circle cx="30" cy="390" r="2"/>
+        <circle cx="30" cy="450" r="2"/>
+        <circle cx="30" cy="510" r="2"/>
+        <circle cx="30" cy="570" r="2"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <div class="nav-logo" onclick="goHome()">
+    <img src="assets/nav-logo.png" alt="ARUSHI ka PORTFOLIO" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',innerHTML:'ARUSHI <span class=ka>का</span> PORTFOLIO'}))">
+  </div>
+  <div class="nav-right">
+    <button class="hamburger" onclick="toggleNav(event)" aria-label="Menu">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a onclick="scrollToSection('about'); closeNav()">About me</a>
+      <a onclick="scrollToSection('projects'); closeNav()">Projects</a>
+      <a onclick="scrollToSection('outside'); closeNav()">Outside work</a>
+      <a onclick="scrollToSection('contact'); closeNav()">Contact</a>
+    </div>
+    <a class="nav-cta" onclick="scrollToSection('contact')">Get in touch!</a>
+  </div>
+</nav>
+
+<!-- ============================================ -->
+<!-- MAIN VIEW -->
+<!-- Order: Cover → About me → Projects → Outside work → Contact -->
+<!-- ============================================ -->
+<div id="main-view" class="view active">
+
+  <!-- ========== COVER ========== -->
+  <section id="cover-sec" onclick="scrollToSection('about')">
+    <div class="cover-toran left">
+      <img src="assets/toran-left.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',innerText:'🍋'}))">
+    </div>
+    <div class="cover-toran right">
+      <img src="assets/toran-right.png" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',innerText:'🍋'}))">
+    </div>
+    <div class="cover-art">
+      <img src="assets/cover-art.png" alt="ARUSHI ka PORTFOLIO — देखो मगर प्यार से" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',innerHTML:'<div class=title>ARUSHI का PORTFOLIO</div><div class=tagline>देखो मगर प्यार से</div><div class=note>[Drop assets/cover-art.png here]</div>'}))">
+    </div>
+    <button class="cover-cta" onclick="scrollToSection('about')">
+      Tap to continue
+      <svg class="icon arrow" style="width: 50px;"><use href="#ic-arrow"/></svg>
+    </button>
+  </section>
+
+<!-- ========== ABOUT ME ========== -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">
+        <svg class="icon lotus" style="width: 16px; height: 16px;"><use href="#ic-lotus"/></svg>
+        About me <span class="hindi">/ मेरे बारे में</span>
+      </div>
+      <div class="about-intro">
+        <div class="about-text">
+          <h2 class="about-greeting">Hi, I'm Arushi.</h2>
+          <p>I design products that ask for people&rsquo;s money, attention, or long-term commitment to their health.</p>
+          <p>Product Designer II at <a href="https://www.ketto.org" target="_blank" rel="noopener">Ketto</a> with 3+ years of experience across crowdfunding (<strong>Ketto</strong>), an early-stage US partner (<strong>equalall</strong>), and a 0&rarr;1 medical weight-loss product (<strong>MetaGo</strong>). My work spans acquisition, activation, retention, and referral, combining qualitative research with AI-assisted workflows.</p>
+          <p>Trained at <a href="https://www.nift.ac.in/mumbai/" target="_blank" rel="noopener">NIFT Mumbai</a> in fashion and lifestyle design, I now design digital products with a strong focus on human behaviour and usability.</p>
+        </div>
+        <div class="portrait-frame">
+          <img src="assets/portrait.png" alt="Arushi — collage portrait" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',innerText:'[Drop assets/portrait.png — your collage portrait]'}))">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ========== PROJECTS ========== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">
+        <svg class="icon lotus" style="width: 16px; height: 16px;"><use href="#ic-lotus"/></svg>
+        Projects <span class="hindi">/ प्रोजेक्ट्स</span>
+      </div>
+      <h2 class="section-title" style="margin-bottom: 3rem;">My projects.</h2>
+
+      <!-- PROJECT 01 — yellow border -->
+      <div class="project-card-large c1">
+        <div class="project-inner">
+          <div class="project-text">
+            <h3>Post-donation, redesigned end-to-end</h3>
+            <p>Treated <strong>thank-you, updates, and fundraiser-ended</strong> as a system instead of three afterthoughts. Picked up the phone with donors. Reframed a dead-end page into a conversion engine.</p>
+            <div class="project-tags">
+              <span class="tag">Data driven design</span>
+              <span class="tag">Qualitative research</span>
+              <span class="tag">System thinking</span>
+              <span class="tag">Lifecycle UX</span>
+            </div>
+            <button class="case-cta" onclick="showCase('post-donation')">View full case study →</button>
+          </div>
+          <div class="project-image-slot">
+            <img src="assets/project-01.png" alt="Post-donation mockup" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'Drop project mockup at <br><small>assets/project-01.png</small>'}))">
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 02 — teal border -->
+      <div class="project-card-large c2">
+        <div class="project-inner">
+          <div class="project-text">
+            <h3>MetaGo — 0→1 medical-weight-loss platform</h3>
+            <p>Designed a six-month medical commitment from a blank page. Acquisition website + quiz, logged-in MVP, an <strong>AI-built app</strong>, and a research engine that drives leadership decisions monthly.</p>
+            <div class="project-tags">
+              <span class="tag">0→1 design</span>
+              <span class="tag">Health-tech</span>
+              <span class="tag">AI-augmented design</span>
+              <span class="tag">Research leadership</span>
+            </div>
+            <button class="case-cta" onclick="showCase('metago')">View full case study →</button>
+          </div>
+          <div class="project-image-slot">
+            <img src="assets/project-02.png" alt="MetaGo mockup" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'Drop project mockup at <br><small>assets/project-02.png</small>'}))">
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 03 — pink border -->
+      <div class="project-card-large c3">
+        <div class="project-inner">
+          <div class="project-text">
+            <h3>A new way to give — 15% of GMV</h3>
+            <p>A small design intervention rooted in user research that scaled to <strong>15% of total GMV</strong> in six months. Reframing how donors perceive online giving.</p>
+            <div class="project-tags">
+              <span class="tag">Data driven design</span>
+              <span class="tag">Behavioural insight</span>
+              <span class="tag">Minimal intervention</span>
+              <span class="tag">NGO partnerships</span>
+            </div>
+            <button class="case-cta" onclick="showCase('new-giving')">View full case study →</button>
+          </div>
+          <div class="project-image-slot">
+            <img src="assets/project-03.png" alt="New giving mockup" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'Drop project mockup at <br><small>assets/project-03.png</small>'}))">
+          </div>
+        </div>
+      </div>
+
+      <!-- SCBI sub-section -->
+      <div class="subhead-block">
+        <div class="subhead-label">
+          <svg class="icon lotus" style="width: 14px; height: 14px;"><use href="#ic-lotus"/></svg>
+          Small changes, big impact <span class="hindi">/ छोटे बदलाव, बड़ा असर</span>
+        </div>
+        <h3 class="subhead">Three smaller interventions focused on improving clarity, trust, and user action.</h3>
+        <div class="scbi-carousel">
+          <button class="scbi-arrow prev" onclick="scbiNav(-1)" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M15 6 L9 12 L15 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="scbi-track">
+            <div class="scbi-cards-wrapper">
+              <div class="stamp-card c1">
+                <div class="text-side">
+                  <div class="quote">"The images feel too graphic."</div>
+                  <div class="field"><div class="field-label">Observation</div><div class="field-text">Users frequently reacted negatively to graphic medical imagery on fundraiser pages.</div></div>
+                  <div class="field"><div class="field-label">Constraint</div><div class="field-text">The same imagery performed strongly in ads, so removing it entirely would hurt acquisition.</div></div>
+                  <div class="field"><div class="field-label">Solution</div><div class="field-text">Introduced blurred imagery on story pages for users arriving from ads, allowing them to reveal the image only if they chose to.</div></div>
+                  <div class="field"><div class="field-label">Result</div><div class="field-text"><span class="result-strip">Story conversions increased from 10% to 18%.</span></div></div>
+                </div>
+                <div class="image-side">
+                  <img src="assets/scbi-01.png" alt="Blur image story mockup" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'Drop mockup at <br><small>assets/scbi-01.png</small>'}))">
+                </div>
+              </div>
+              <div class="stamp-card c2">
+                <div class="text-side">
+                  <div class="quote">"What does sharing actually do?"</div>
+                  <div class="field"><div class="field-label">Observation</div><div class="field-text">The share button on cart and thank-you pages had low engagement.</div></div>
+                  <div class="field"><div class="field-label">Constraint</div><div class="field-text">Sharing could not compete too aggressively with donation flows for user attention.</div></div>
+                  <div class="field"><div class="field-label">Solution</div><div class="field-text">Replaced a generic share button with a structured card showing sharing platforms, the expected impact of sharing, and clearer interaction cues.</div></div>
+                  <div class="field"><div class="field-label">Result</div><div class="field-text"><span class="result-strip">5× increase in shares while maintaining Average Transaction Size.</span></div></div>
+                </div>
+                <div class="image-side">
+                  <img src="assets/scbi-02.png" alt="Share card mockup" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'Drop mockup at <br><small>assets/scbi-02.png</small>'}))">
+                </div>
+              </div>
+              <div class="stamp-card c3">
+                <div class="text-side">
+                  <div class="quote">"Monthly giving feels like a big commitment."</div>
+                  <div class="field"><div class="field-label">Observation</div><div class="field-text">Monthly giving adoption on equalall was lower than expected.</div></div>
+                  <div class="field"><div class="field-label">Constraint</div><div class="field-text">Brand familiarity was still developing, making long-term commitment difficult for new users.</div></div>
+                  <div class="field"><div class="field-label">Solution</div><div class="field-text">Introduced a "Give Monthly for 3 Months" option as a lower-commitment entry point.</div></div>
+                  <div class="field"><div class="field-label">Result</div><div class="field-text"><span class="result-strip">Monthly giving sign-ups tripled.</span></div></div>
+                </div>
+                <div class="image-side">
+                  <img src="assets/scbi-03.png" alt="3-month trial mockup" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'Drop mockup at <br><small>assets/scbi-03.png</small>'}))">
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="scbi-arrow next" onclick="scbiNav(1)" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 6 L15 12 L9 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="scbi-dots">
+          <button class="scbi-dot active" onclick="scbiGoTo(0)">1</button>
+          <button class="scbi-dot" onclick="scbiGoTo(1)">2</button>
+          <button class="scbi-dot" onclick="scbiGoTo(2)">3</button>
+        </div>
+      </div>
+
+      <!-- Archive sub-section -->
+      <div class="subhead-block">
+        <div class="subhead-label">
+          <svg class="icon lotus" style="width: 14px; height: 14px;"><use href="#ic-lotus"/></svg>
+          Archive from NIFT days <span class="hindi">/ पुराना काम</span>
+        </div>
+        <h3 class="subhead">Earlier work.</h3>
+        <div class="archive-grid">
+          <div class="archive-card c1">
+            <div class="archive-circle">
+              <img src="assets/archive-01.png" alt="Game Dashboard Redesign" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerText:'[archive-01.png]'}))">
+            </div>
+            <h4>Game Dashboard Redesign</h4>
+          </div>
+          <div class="archive-card c2">
+            <div class="archive-circle">
+              <img src="assets/archive-02.png" alt="Eyewear Design" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerText:'[archive-02.png]'}))">
+            </div>
+            <h4>Eyewear Design</h4>
+          </div>
+          <div class="archive-card c3">
+            <div class="archive-circle">
+              <img src="assets/archive-03.png" alt="AgriTech Platform" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerText:'[archive-03.png]'}))">
+            </div>
+            <h4>AgriTech Platform</h4>
+          </div>
+          <div class="archive-card c4">
+            <div class="archive-circle">
+              <img src="assets/archive-04.png" alt="Eco-tech Platform" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerText:'[archive-04.png]'}))">
+            </div>
+            <h4>Eco-tech Platform</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- ========== OUTSIDE WORK ========== -->
+  <section id="outside">
+    <div class="container">
+      <div class="section-label">
+        <svg class="icon lotus" style="width: 16px; height: 16px; color: var(--yellow);"><use href="#ic-lotus"/></svg>
+        Outside work <span class="hindi">/ काम के बाहर</span>
+      </div>
+      <h2 class="section-title">Outside work..</h2>
+      <div class="outside-content">
+        <div class="outside-text">
+          <p>Outside work, I enjoy travel journaling, urban sketching, and mixology — interests that keep me observant and creatively engaged.</p>
+          <p>I previously built Desmoi, an androgynous accessories brand, and later collaborated with a sustainability-focused label.</p>
+          <p>I also enjoy strength training, yoga, dance, and board games, which help me stay disciplined, social, and curious outside of work.</p>
+        </div>
+        <div class="outside-illustrations">
+          <img src="assets/outside-illos.png" alt="Outside work illustrations" onerror="this.replaceWith(Object.assign(document.createElement('div'),{innerText:'[Drop assets/outside-illos.png — hand-drawn fly illustrations]'}))">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ========== CONTACT ========== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">
+        <svg class="icon lotus" style="width: 16px; height: 16px; color: var(--yellow);"><use href="#ic-lotus"/></svg>
+        Contact <span class="hindi">/ संपर्क</span>
+      </div>
+      <div class="postcard-image-wrapper">
+        <picture>
+          <source media="(max-width: 700px)" srcset="assets/postcard-mobile.png">
+          <img src="assets/postcard.png" alt="Contact postcard — देखा, तो अब बात करते हैं?" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'postcard-fallback',innerText:'[Drop assets/postcard.png and assets/postcard-mobile.png]'}))">
+        </picture>
+        <div class="postcard-overlay-links">
+          <a href="mailto:arushi.parasrampuria@gmail.com">arushi.parasrampuria@gmail.com</a>
+          <a href="https://linkedin.com/in/arushi-parasrampuria" target="_blank" rel="noopener">linkedin.com/in/arushi-parasrampuria</a>
+          <a href="#">Resume (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============================================ -->
+<!-- CASE STUDY: POST-DONATION -->
+<!-- ============================================ -->
+<div id="post-donation" class="view case-view">
+  <div class="case-container">
+<a class="case-back" onclick="goHome('projects')"><svg class="icon arrow" style="transform: scaleX(-1); width: 50px;"><use href="#ic-arrow"/></svg> Back to projects</a>
+    <h1 class="case-title">Post-donation</h1>
+    <div class="case-subtitle">Most donation platforms treat &ldquo;thank you&rdquo; as the end of the journey. I treated it as part of retention.</div>
+    <div class="tldr">
+      <div class="tldr-row"><span class="tldr-label">Role</span><span class="tldr-value">Led design across three post-donation surfaces</span></div>
+      <div class="tldr-row"><span class="tldr-label">Team</span><span class="tldr-value">PM, engineering, user research</span></div>
+      <div class="tldr-row"><span class="tldr-label">Timeline</span><span class="tldr-value">~9 weeks across three projects [confirm dates]</span></div>
+      <div class="tldr-row"><span class="tldr-label">Impact</span><span class="tldr-value">Post-donation conversion <strong>2% → 12%</strong>, Average Transaction Size <strong>+50%</strong></span></div>
+    </div>
+    <div class="case-section">
+      <h2>Why post-donation?</h2>
+      <p>Most crowdfunding platforms focus heavily on the transaction itself. The thank-you screen, updates flow, and campaign-ended page are often treated as secondary experiences.</p>
+      <p>But for Ketto, post-donation is where retention, repeat giving, and long-term trust are built.</p>
+      <p>I approached post-donation as a connected journey across three moments:</p>
+      <ol>
+        <li><strong>Thank You</strong> → gratitude and next steps</li>
+        <li><strong>Updates</strong> → visibility into impact</li>
+        <li><strong>Fundraiser Ended</strong> → closure and redirection</li>
+      </ol>
+      <p>I worked on all three surfaces sequentially, with each project informing the next.</p>
+    </div>
+    <div class="divider-lotus"><svg class="icon lotus-large"><use href="#ic-lotus"/></svg></div>
+    <div class="case-section">
+      <h2>Surface 1 — Thank You <span style="font-size: 0.7em; color: var(--text); opacity: 0.7; font-weight: 500;">(~4 weeks)</span></h2>
+      <p>Ketto had multiple thank-you page variants across products, each with different layouts, logic, and upsell patterns.</p>
+      <p>I standardized the experience into a single scalable framework with consistent components and behaviour.</p>
+      <h3>Outcome</h3>
+      <p><strong>+17% increase</strong> in upsell conversion across thank-you pages.</p>
+      <div class="case-visual">
+        <img src="assets/post-donation-thankyou.png" alt="Thank-you page variations standardized into one component" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'[VISUAL: Thank-you page variations]<br><small>Drop at assets/post-donation-thankyou.png</small>'}))">
+      </div>
+    </div>
+    <div class="divider-lotus"><svg class="icon lotus-large"><use href="#ic-lotus"/></svg></div>
+    <div class="case-section">
+      <h2>Surface 2 — Updates <span style="font-size: 0.7em; color: var(--text); opacity: 0.7; font-weight: 500;">(~2 weeks)</span></h2>
+      <p>After donating, users receive updates about how their contribution is being used. The existing experience treated updates as passive communication.</p>
+      <p>I redesigned the page to strengthen continuity between the donor and the cause, while creating clearer opportunities for continued support.</p>
+      <h3>Outcome</h3>
+      <p>The updates surface became a <strong>new acquisition channel for SIP donations</strong>.</p>
+      <div class="case-visual">
+        <img src="assets/post-donation-updates.png" alt="Updates page redesign with SIP entry highlighted" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'[VISUAL: Updates page with SIP entry]<br><small>Drop at assets/post-donation-updates.png</small>'}))">
+      </div>
+    </div>
+    <div class="divider-lotus"><svg class="icon lotus-large"><use href="#ic-lotus"/></svg></div>
+    <div class="case-section">
+      <h2>Surface 3 — Fundraiser Ended <span style="font-size: 0.7em; color: var(--text); opacity: 0.7; font-weight: 500;">(~3 weeks)</span></h2>
+      <p>When a fundraiser closes, donor intent often still exists — but the existing page acted as a dead end.</p>
+      <p>Donations from this surface were <strong>near-zero, effectively a dead end</strong>.</p>
+      <p>Before redesigning the page, I spoke directly with donors who had visited closed campaigns to understand what they expected at that moment.</p>
+      <p>One insight became clear: <strong>donors wanted closure before another ask.</strong></p>
+      <p>My early concepts focused too heavily on redirecting users to new campaigns. The interviews showed that users first wanted to understand what happened to the patient, family, or cause they had supported.</p>
+      <p>The redesign prioritized:</p>
+      <ul>
+        <li>campaign outcomes</li>
+        <li>beneficiary updates</li>
+        <li>impact visibility</li>
+        <li>contextual opportunities to continue helping</li>
+      </ul>
+      <p>Upsell opportunities remained part of the experience, but only after users received emotional closure.</p>
+      <div class="case-visual">
+        <img src="assets/post-donation-fundraiser.png" alt="Fundraiser ended page before and after redesign" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'[VISUAL: Before / After of Fundraiser Ended page]<br><small>Drop at assets/post-donation-fundraiser.png</small>'}))">
+      </div>
+      <h3>Outcome</h3>
+      <p>What had been a near-zero surface is now <strong>driving a meaningful share of post-campaign giving</strong>.</p>
+    </div>
+    <div class="divider-lotus"><svg class="icon lotus-large"><use href="#ic-lotus"/></svg></div>
+    <div class="case-section">
+      <h2>The combined impact</h2>
+      <p>Together, the three interventions improved <strong>post-donation conversion from 2% to 12%</strong> with increased <strong>Average Transaction Size by ~50%</strong>.</p>
+    </div>
+    <div class="case-section">
+      <h2>What I learned</h2>
+      <p>Users are not always ready for the next action a business wants them to take. Understanding emotional context is as important as optimizing funnels.</p>
+      <p>Direct conversations with users surfaced insights that analytics alone could not.</p>
+    </div>
+    <div class="up-next" onclick="showCase('metago')">
+      <div class="label">Up next</div>
+      <div class="next-title">METAGO</div>
+      <svg class="icon arrow" style="color: var(--khaki);"><use href="#ic-arrow"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- CASE STUDY: METAGO -->
+<!-- ============================================ -->
+<div id="metago" class="view case-view">
+  <div class="case-container">
+<a class="case-back" onclick="goHome('projects')"><svg class="icon arrow" style="transform: scaleX(-1); width: 50px;"><use href="#ic-arrow"/></svg> Back to projects</a>
+    <h1 class="case-title">MetaGo</h1>
+    <div class="case-subtitle">Designing a six-month medical commitment from 0→1.</div>
+    <div class="tldr">
+      <div class="tldr-row"><span class="tldr-label">Role</span><span class="tldr-value">Lead designer, MetaGo</span></div>
+      <div class="tldr-row"><span class="tldr-label">Team</span><span class="tldr-value">1 PM, 1 APM, 1 researcher (managed), marketing collaboration</span></div>
+      <div class="tldr-row"><span class="tldr-label">Timeline</span><span class="tldr-value">Acquisition + post-login launched October [year]. App launched within the following 1–2 months.</span></div>
+      <div class="tldr-row"><span class="tldr-label">Scope</span><span class="tldr-value">16 landing-page variants across 5 months · 6 monthly research rounds with 80+ users · 20-screen logged-in MVP · two app versions</span></div>
+      <div class="tldr-row"><span class="tldr-label">Designed</span><span class="tldr-value">Acquisition website + quiz, logged-in MVP, app experiences, research dashboards. Branding handled by another team.</span></div>
+      <div class="tldr-row"><span class="tldr-label">Impact</span><span class="tldr-value">Landing-to-signup conversion <strong>2–10%</strong>, quiz completion <strong>92%</strong></span></div>
+    </div>
+    <div class="case-section">
+      <h2>What MetaGo is</h2>
+      <p>MetaGo is a medical-first weight-loss platform built within Ketto.</p>
+      <p>Eligible users are prescribed GLP-1 medications and supported through doctor consultations, coaching, diet plans, and ongoing tracking across a six-month program.</p>
+      <p>The onboarding flow asks users for significant commitment:</p>
+      <ul>
+        <li><strong>₹1,799</strong> initial payment for lab work and consultations</li>
+        <li><strong>₹24,000–60,000</strong> six-month program cost depending on treatment</li>
+      </ul>
+      <p>Although incubated within Ketto, MetaGo operates as a separate product with a different audience, problem space, and product language.</p>
+    </div>
+    <div class="case-section">
+      <h2>My approach to 0→1 products</h2>
+      <p>I begin by designing the ideal version of the experience before aligning with engineering and product constraints.</p>
+      <p>This helps the team make deliberate trade-offs during MVP planning, while maintaining clarity on the long-term direction of the product.</p>
+    </div>
+    <div class="divider-lotus"><svg class="icon lotus-large"><use href="#ic-lotus"/></svg></div>
+    <div class="case-section">
+      <h2>Chapter 1 — Acquisition</h2>
+      <p>We initially launched multiple landing-page variants with different positioning and CTAs. Over time, the quiz became the strongest conversion mechanism.</p>
+      <p>The quiz helped:</p>
+      <ul>
+        <li>pre-qualify users</li>
+        <li>establish medical credibility</li>
+        <li>increase user investment before payment</li>
+      </ul>
+      <h3>Outcome</h3>
+      <ul>
+        <li><strong>2–10% landing-to-signup conversion</strong></li>
+        <li><strong>92% quiz completion</strong></li>
+      </ul>
+      <h3>A language change that reduced friction</h3>
+      <p>Early research showed that users were uncomfortable with the word "injection."</p>
+      <p>In practice, the medication used an auto-injector mechanism closer to an EpiPen than a traditional syringe.</p>
+      <p>We updated product language and visual communication to better reflect the actual experience, which reduced hesitation during onboarding.</p>
+      <h3>When the problem was trust, not pricing</h3>
+      <p>Among users who paid ₹1,799 and later dropped off, most cited concerns around GLP-1 medication itself:</p>
+      <ul>
+        <li>side effects</li>
+        <li>fear of dependency</li>
+        <li>family opposition</li>
+        <li>doctor pushback</li>
+      </ul>
+      <p>Price was not the primary barrier.</p>
+      <p>This shifted the focus from pricing optimization to trust-building and education.</p>
+      <p>The recommendation was to introduce <strong>targeted educational communication before doctor consultations</strong>, helping users understand the treatment model and address concerns proactively.</p>
+      <div class="case-visual">
+        <img src="assets/metago-acquisition.png" alt="MetaGo landing page and quiz flow" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'[VISUAL: Landing page + quiz flow]<br><small>Drop at assets/metago-acquisition.png</small>'}))">
+      </div>
+    </div>
+    <div class="divider-lotus"><svg class="icon lotus-large"><use href="#ic-lotus"/></svg></div>
+    <div class="case-section">
+      <h2>Chapter 2 — Activation</h2>
+      <p>Once users entered the program, the experience included:</p>
+      <ul>
+        <li>onboarding</li>
+        <li>scheduling</li>
+        <li>coach assignment</li>
+        <li>lab coordination</li>
+        <li>progress tracking</li>
+        <li>recurring engagement</li>
+      </ul>
+      <p>A key focus during MVP planning was ensuring every screen led to a clear next step, even within a reduced scope.</p>
+      <div class="case-visual">
+        <img src="assets/metago-activation.png" alt="MetaGo logged-in MVP — ideal version vs. cuts" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'[VISUAL: Ideal version vs. MVP cuts]<br><small>Drop at assets/metago-activation.png</small>'}))">
+      </div>
+    </div>
+    <div class="divider-lotus"><svg class="icon lotus-large"><use href="#ic-lotus"/></svg></div>
+    <div class="case-section">
+      <h2>Chapter 3 — The app</h2>
+      <p>Research showed that most users wanted a dedicated app experience, particularly for:</p>
+      <ul>
+        <li>meal tracking</li>
+        <li>progress visibility</li>
+        <li>structured engagement</li>
+      </ul>
+      <p>I designed and shipped two versions of the app in quick succession, using AI tools to speed up synthesis, iteration, and prototyping workflows.</p>
+      <div class="callout"><strong>AI tools used across the process:</strong> Claude, NotebookLM, ChatGPT, and Gemini.</div>
+      <div class="case-visual">
+        <img src="assets/metago-app.png" alt="MetaGo app — v1 vs v2 side-by-side" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'[VISUAL: v1 vs v2 side-by-side, blurred where pre-launch]<br><small>Drop at assets/metago-app.png</small>'}))">
+      </div>
+      <div class="prototype-block">
+        <p class="prototype-intro">🔒 View the interactive prototypes <span class="muted">(password protected)</span></p>
+        <div class="prototype-buttons">
+          <button class="prototype-btn" onclick="viewArtifact('https://claude.ai/public/artifacts/c08e4d3a-d541-47e9-a4ae-ac65a9d4f4e4')">Version 1 →</button>
+          <button class="prototype-btn" onclick="viewArtifact('https://claude.ai/public/artifacts/75152e5f-c546-4f87-b1ba-950888d72e0c')">Version 2 →</button>
+        </div>
+      </div>
+    </div>
+    <div class="divider-lotus"><svg class="icon lotus-large"><use href="#ic-lotus"/></svg></div>
+    <div class="case-section">
+      <h2>Chapter 4 — Ongoing research</h2>
+      <p>Research became a core part of product decision-making.</p>
+      <h3>Qualitative</h3>
+      <ul>
+        <li>Monthly user interviews</li>
+        <li>Sales-call analysis</li>
+        <li>80+ users across active users, dropped-off leads, and ambassadors</li>
+      </ul>
+      <h3>Quantitative</h3>
+      <ul>
+        <li>Dashboards tracking acquisition, activation, and retention patterns</li>
+      </ul>
+      <p>The two informed each other continuously: behavioural patterns in dashboards guided research questions, while qualitative findings shaped future product decisions.</p>
+
+      <h3>Key findings</h3>
+      <h4>1. Weight loss was not the only success metric</h4>
+      <p>Early users often focused on cravings and visible weight reduction.</p>
+      <p>Over time, users also reported improvements in:</p>
+      <ul>
+        <li>sleep</li>
+        <li>blood sugar markers</li>
+        <li>energy levels</li>
+        <li>eating behaviour</li>
+        <li>overall health indicators</li>
+      </ul>
+      <p>This led to changes in onboarding expectations and the introduction of non-scale progress tracking inside the app.</p>
+
+      <h4>2. Coaching value changed over time</h4>
+      <p>Users valued accountability and support early in the journey. However, by later stages of the program, some users began comparing MetaGo's cost against purchasing medication independently.</p>
+      <p>This highlighted the need to evolve the coaching model as user maturity increased.</p>
+
+      <h4>3. Household behaviour affected adherence</h4>
+      <p>Diet planning decisions often involved another family member responsible for meal preparation.</p>
+      <p>This influenced coaching protocols and communication strategies.</p>
+
+      <h3>Additional outputs from the research process</h3>
+      <p>The same research workflow also informed:</p>
+      <ul>
+        <li>user segmentation models</li>
+        <li>sales narratives</li>
+        <li>content strategy</li>
+        <li>medication delivery improvements</li>
+      </ul>
+      <p>Research was not a separate function from product design — it directly shaped roadmap and prioritization decisions.</p>
+      <div class="case-visual">
+        <img src="assets/metago-research.png" alt="MetaGo research dashboard / leadership deck" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'[VISUAL: Dashboard / research deck snapshot]<br><small>Drop at assets/metago-research.png</small>'}))">
+      </div>
+    </div>
+    <div class="case-section">
+      <h2>What I learned</h2>
+      <p>Designing 0→1 products requires clarity around priorities, constraints, and sequencing.</p>
+      <p>The business metric being optimized is not always the same metric users emotionally value most.</p>
+    </div>
+    <div class="up-next" onclick="showCase('new-giving')">
+      <div class="label">Up next</div>
+      <div class="next-title">A NEW WAY TO GIVE</div>
+      <svg class="icon arrow" style="color: var(--khaki);"><use href="#ic-arrow"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- CASE STUDY: NEW GIVING -->
+<!-- ============================================ -->
+<div id="new-giving" class="view case-view">
+  <div class="case-container">
+<a class="case-back" onclick="goHome('projects')"><svg class="icon arrow" style="transform: scaleX(-1); width: 50px;"><use href="#ic-arrow"/></svg> Back to projects</a>
+    <h1 class="case-title">A new way to give</h1>
+    <div class="case-subtitle">A small intervention that grew to 15% of GMV.</div>
+    <div class="tldr">
+      <div class="tldr-row"><span class="tldr-label">Role</span><span class="tldr-value">Designer</span></div>
+      <div class="tldr-row"><span class="tldr-label">Team</span><span class="tldr-value">PM, engineering, NGO partnerships</span></div>
+      <div class="tldr-row"><span class="tldr-label">Timeline</span><span class="tldr-value">Dec 2024 → March 2025</span></div>
+      <div class="tldr-row"><span class="tldr-label">Scope</span><span class="tldr-value">Single-component intervention on existing food-and-hunger donation flows</span></div>
+      <div class="tldr-row"><span class="tldr-label">Impact</span><span class="tldr-value"><strong>15% of total GMV</strong> within 6 months</span></div>
+    </div>
+    <div class="case-section">
+      <h2>The insight</h2>
+      <p>During a donor research call, one user said:</p>
+      <blockquote>"It feels nicer to feed a cow a banana than to donate online."</blockquote>
+      <p>The comment highlighted a larger behavioural gap: online donation often feels intangible.</p>
+      <p>Donors wanted a clearer sense of what their contribution was enabling.</p>
+    </div>
+    <div class="divider-lotus"><svg class="icon lotus-large"><use href="#ic-lotus"/></svg></div>
+    <div class="case-section">
+      <h2>The intervention</h2>
+      <p>The existing donation flow already performed well, so the solution needed to work within the current structure rather than replace it.</p>
+      <p>I introduced a single component on food-and-hunger campaigns that allowed users to donate toward tangible items instead of generic amounts.</p>
+      <p>Examples:</p>
+      <div class="callout"><strong>₹300 = 1 rice bag</strong><br><strong>₹500 = 1 vegetable kit</strong></div>
+      <p>The underlying donation values remained the same, but the framing became more concrete and emotionally understandable.</p>
+      <p>The standard donation flow remained available alongside it.</p>
+      <div class="case-visual">
+        <img src="assets/new-giving-component.png" alt="Donation card before and after with item visualization" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'placeholder-msg',innerHTML:'[VISUAL: Donation card with item visualization]<br><small>Drop at assets/new-giving-component.png</small>'}))">
+      </div>
+    </div>
+    <div class="divider-lotus"><svg class="icon lotus-large"><use href="#ic-lotus"/></svg></div>
+    <div class="case-section">
+      <h2>Extending the experience</h2>
+      <p>The intervention was integrated into the existing post-donation ecosystem:</p>
+      <ul>
+        <li><strong>Thank You pages</strong> confirmed item contributions</li>
+        <li><strong>Updates</strong> communicated delivery and impact</li>
+        <li><strong>Emails</strong> continued the same language throughout</li>
+      </ul>
+      <p>Because the supporting infrastructure already existed, the feature could launch quickly without requiring major platform changes.</p>
+    </div>
+    <div class="case-section">
+      <h2>Outcome</h2>
+      <p>Within six months, the intervention contributed <strong>15% of total GMV</strong>.</p>
+      <p>The growth came from:</p>
+      <ul>
+        <li>new donors entering food-and-hunger campaigns</li>
+        <li>existing donors shifting toward item-based giving</li>
+      </ul>
+    </div>
+    <div class="case-section">
+      <h2>What I learned</h2>
+      <p>Small interventions can create outsized impact when they align with existing user behaviour.</p>
+      <p>In this case, the challenge was not changing the donation flow entirely, but reframing how the contribution was understood.</p>
+    </div>
+    <div class="up-next" onclick="goHome('projects')">
+      <div class="label">That's a wrap</div>
+      <div class="next-title">BACK TO PROJECTS</div>
+      <svg class="icon arrow" style="color: var(--khaki); transform: scaleX(-1);"><use href="#ic-arrow"/></svg>
+    </div>
+  </div>
+</div>
+
+<!-- Password modal for protected artifacts -->
+<div id="password-modal" class="password-modal" onclick="if(event.target.id==='password-modal') closePwdModal()">
+  <div class="password-modal-content">
+    <button class="password-modal-close" onclick="closePwdModal()" aria-label="Close">×</button>
+    <h3>🔒 Password required</h3>
+    <p>This prototype is password protected. Reach out to Arushi for access.</p>
+    <input type="password" id="password-input" placeholder="Enter password" autocomplete="off">
+    <div class="password-error" id="password-error">Incorrect password.</div>
+    <button class="password-submit" onclick="submitPassword()">View prototype →</button>
+  </div>
+</div>
+
+<script>
+let pendingArtifactUrl = '';
+function viewArtifact(url) {
+  pendingArtifactUrl = url;
+  const modal = document.getElementById('password-modal');
+  modal.classList.add('open');
+  const input = document.getElementById('password-input');
+  input.value = '';
+  document.getElementById('password-error').classList.remove('show');
+  setTimeout(() => input.focus(), 50);
+}
+function closePwdModal() {
+  document.getElementById('password-modal').classList.remove('open');
+}
+function submitPassword() {
+  const pwd = document.getElementById('password-input').value;
+  if (pwd === 'metagoartifact') {
+    window.open(pendingArtifactUrl, '_blank', 'noopener,noreferrer');
+    closePwdModal();
+  } else {
+    document.getElementById('password-error').classList.add('show');
+  }
+}
+// Enter to submit, Esc to close
+document.addEventListener('keydown', (e) => {
+  const modal = document.getElementById('password-modal');
+  if (!modal.classList.contains('open')) return;
+  if (e.key === 'Enter') submitPassword();
+  if (e.key === 'Escape') closePwdModal();
+});
+
+function showCase(id) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+}
+function goHome(section) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('main-view').classList.add('active');
+  if (section) {
+    setTimeout(() => {
+      const el = document.getElementById(section);
+      if (el) el.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }, 30);
+  } else {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }
+}
+function scrollToSection(id) {
+  const mainView = document.getElementById('main-view');
+  if (!mainView.classList.contains('active')) {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    mainView.classList.add('active');
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 30);
+  } else {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+function toggleNav(e) {
+  if (e) e.stopPropagation();
+  document.getElementById('navLinks').classList.toggle('open');
+}
+function closeNav() {
+  document.getElementById('navLinks').classList.remove('open');
+}
+
+// SCBI carousel
+let scbiIndex = 0;
+const scbiTotal = 3;
+function scbiNav(dir) {
+  scbiIndex = (scbiIndex + dir + scbiTotal) % scbiTotal;
+  updateScbi();
+}
+function scbiGoTo(i) {
+  scbiIndex = i;
+  updateScbi();
+}
+function updateScbi() {
+  const wrapper = document.querySelector('.scbi-cards-wrapper');
+  if (wrapper) wrapper.style.transform = 'translateX(-' + (scbiIndex * 100) + '%)';
+  document.querySelectorAll('.scbi-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === scbiIndex);
+  });
+}
+// Close hamburger menu on outside click
+document.addEventListener('click', (e) => {
+  const nav = document.getElementById('navLinks');
+  const burger = document.querySelector('.hamburger');
+  if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== burger) {
+    nav.classList.remove('open');
+  }
+});
+</script>
+
+</body>
+</html>
